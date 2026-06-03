@@ -1,0 +1,31 @@
+-l = long format
+-a = all, show hidden files as well
+-i = ignore case sensitive
+
+systemctl start sshd = will start the service
+		stop = will stop
+	      reload = keep it running and reload
+	     restart = restart
+	      enable = will make sure service will start at boot
+	     disable = service won't start at boot
+
+yum and dnf are same dnf in new version
+
+find -- 
+
+find . -name "cat.jpg" = find for everywhere of file name cat.jpg
+
+. = current path, here
+/ = entire system, everywhere
+/home = specific dir
+-name = filename
+-type d = only folders
+-tyoe f = only files
+-size +100M = files largers than 100MB
+-size -10k = files smaller than 10kb
+
+find . -name "*.png" =  find every png file
+
+"*.pdf" = any pdf file
+"work*" = any file starts with work. eg- work-bills, work-users
+"*data*" = any filename which has data in it anywhere

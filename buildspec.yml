@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       python: 3.11
     commands:
+      - echo "Installing dependencies..."
       - pip install -r requirements.txt
 
   build:
@@ -14,9 +15,9 @@ phases:
 
   post_build:
     commands:
-      - echo "Build and tests completed successfully"
+      - echo "Build successful"
 
 artifacts:
   files:
     - '**/*'
-    
+  discard-paths: no

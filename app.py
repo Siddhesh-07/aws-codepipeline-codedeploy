@@ -18,7 +18,7 @@ def health_check():
         "timestamp": datetime.datetime.utcnow().isoformat(),
         "uptime": f"{hours}h {minutes}m {seconds}s",
         "host": socket.gethostname(),
-        "version": "1.0.1"
+        "version": "1.0.1" #version changed from 1.0.0
     }), 200
 
 @app.route('/', methods=['GET'])

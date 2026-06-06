@@ -3,9 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing SSH key..."
+      - echo "Setting up SSH..."
       - mkdir -p ~/.ssh
-      - echo "$EC2_SSH_KEY" > ~/.ssh/deploy_key
+      - aws ssm get-parameter --name "/health-check/ec2-ssh-key" --with-decryption --query "Parameter.Value" --output text > ~/.ssh/deploy_key
       - chmod 600 ~/.ssh/deploy_key
       - ssh-keyscan -H $EC2_HOST >> ~/.ssh/known_hosts
 
